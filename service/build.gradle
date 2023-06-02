@@ -1,0 +1,16 @@
+plugins {
+    id 'java-library'
+    id "io.freefair.lombok" version "8.0.1"
+}
+
+dependencies {
+    api project(':database')
+    implementation 'org.springframework:spring-context:6.0.9'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
